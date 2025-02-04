@@ -1,0 +1,18 @@
+<script setup>
+import { RouterLink, RouterView } from "vue-router";
+
+import Header from "@/components/Header.vue";
+</script>
+
+<template>
+  <div class="app-container">
+    <Header />
+    <RouterView />
+  </div>
+</template>
+<style scoped>
+.app-container {
+  background-color: #f0f0f0;
+  min-height: 100vh;
+}
+</style>
