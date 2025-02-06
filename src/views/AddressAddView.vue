@@ -265,7 +265,7 @@ const intializeMap = () => {
     </div>
     <div
       v-if="step !== 'success'"
-      class="btn-container d-flex align-items-center justify-content-center"
+      class="btn-container shadow d-flex align-items-center justify-content-center"
     >
       <button type="submit" class="btn btn-primary">ثبت و ادامه</button>
     </div>
