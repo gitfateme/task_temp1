@@ -90,6 +90,7 @@ const onMapClick = (event) => {
   marker = L.marker([lat, lng]).addTo(map);
 };
 const intializeMap = () => {
+  if (map) return;
   map = L.map("map-canvas").setView([form.value.lat, form.value.lng], 13);
   L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
     maxZoom: 19,
@@ -108,7 +109,7 @@ const intializeMap = () => {
 
 <template>
   <form @submit.prevent="submit()" @change="validateForm()">
-    <div class="container">
+    <div class="container mt-4">
       <div class="title mb-2" v-if="step === 'form'">ثبت آدرس</div>
       <div
         class="title mb-2 d-none d-sm-block"
